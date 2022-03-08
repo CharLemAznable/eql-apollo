@@ -5,3 +5,17 @@
 ![GitHub code size](https://img.shields.io/github/languages/code-size/CharLemAznable/eql-apollo)
 
 Eql Apollo Extension, using Apollo config Eql.
+
+##### Maven Dependency
+
+待发布.
+
+##### Maven Dependency SNAPSHOT
+
+```xml
+<dependency>
+  <groupId>com.github.charlemaznable</groupId>
+  <artifactId>eql-apollo</artifactId>
+  <version>0.0.7-SNAPSHOT</version>
+</dependency>
+```
