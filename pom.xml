@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.github.charlemaznable</groupId>
+        <artifactId>char-dependencies</artifactId>
+        <version>0.0.7-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>eql-apollo</artifactId>
+    <version>0.0.7-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <name>Eql Apollo Extension</name>
+    <url>https://github.com/CharLemAznable/eql-apollo</url>
+    <description>Eql Apollo Extension.</description>
+
+    <scm>
+        <connection>scm:git:https://github.com/CharLemAznable/eql-apollo.git</connection>
+        <developerConnection>scm:git:https://github.com/CharLemAznable/eql-apollo.git</developerConnection>
+        <url>https://github.com/CharLemAznable/eql-apollo</url>
+    </scm>
+
+    <repositories>
+        <repository>
+            <id>central</id>
+            <url>https://repo1.maven.org/maven2/</url>
+            <layout>default</layout>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>sonatype</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+            <layout>default</layout>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
+        </repository>
+    </repositories>
+
+    <properties>
+        <char-elves.version>0.0.7-SNAPSHOT</char-elves.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.ctrip.framework.apollo</groupId>
+            <artifactId>apollo-client</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.github.bingoohuang</groupId>
+            <artifactId>eql</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.github.charlemaznable</groupId>
+            <artifactId>char-elves</artifactId>
+            <version>${char-elves.version}</version>
+        </dependency>
+    </dependencies>
+
+</project>
