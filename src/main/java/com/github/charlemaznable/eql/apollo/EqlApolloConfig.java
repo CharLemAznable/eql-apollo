@@ -13,6 +13,7 @@ import java.util.Properties;
 
 import static com.github.charlemaznable.core.lang.Propertiess.parseStringToProperties;
 import static com.github.charlemaznable.core.lang.Propertiess.tryDecrypt;
+import static com.google.common.collect.Sets.newHashSet;
 
 @EqualsAndHashCode(of = "connectionName", callSuper = false)
 public class EqlApolloConfig extends EqlPropertiesConfig
@@ -36,11 +37,9 @@ public class EqlApolloConfig extends EqlPropertiesConfig
     @Override
     public void onLoad() {
         val eqlConfig = new DefaultEqlConfigDecorator(this);
-        changeListener = changeEvent -> {
-            if (!changeEvent.changedKeys().contains(connectionName)) return;
-            EqlConfigManager.invalidateCache(eqlConfig);
-        };
-        ConfigService.getConfig(EQL_CONFIG_NAMESPACE).addChangeListener(changeListener);
+        changeListener = e -> EqlConfigManager.invalidateCache(eqlConfig);
+        ConfigService.getConfig(EQL_CONFIG_NAMESPACE)
+                .addChangeListener(changeListener, newHashSet(connectionName));
     }
 
     @Override
