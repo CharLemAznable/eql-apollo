@@ -8,7 +8,13 @@ Eql Apollo Extension, using Apollo config Eql.
 
 ##### Maven Dependency
 
-待发布.
+```xml
+<dependency>
+  <groupId>com.github.charlemaznable</groupId>
+  <artifactId>eql-apollo</artifactId>
+  <version>0.0.7</version>
+</dependency>
+```
 
 ##### Maven Dependency SNAPSHOT
 
@@ -16,6 +22,6 @@ Eql Apollo Extension, using Apollo config Eql.
 <dependency>
   <groupId>com.github.charlemaznable</groupId>
   <artifactId>eql-apollo</artifactId>
-  <version>0.0.7-SNAPSHOT</version>
+  <version>0.0.8-SNAPSHOT</version>
 </dependency>
 ```
