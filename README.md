@@ -12,7 +12,7 @@ Eql Apollo Extension, using Apollo config Eql.
 <dependency>
   <groupId>com.github.charlemaznable</groupId>
   <artifactId>eql-apollo</artifactId>
-  <version>0.1.2</version>
+  <version>2022.0.0</version>
 </dependency>
 ```
 
@@ -22,6 +22,6 @@ Eql Apollo Extension, using Apollo config Eql.
 <dependency>
   <groupId>com.github.charlemaznable</groupId>
   <artifactId>eql-apollo</artifactId>
-  <version>0.1.3-SNAPSHOT</version>
+  <version>2022.0.1-SNAPSHOT</version>
 </dependency>
 ```
