@@ -25,3 +25,12 @@ Eql Apollo Extension, using Apollo config Eql.
   <version>2022.0.1-SNAPSHOT</version>
 </dependency>
 ```
+
+#### 使用Apollo配置[Eql](https://github.com/bingoohuang/eql)
+
+使用Apollo统一管理Eql配置, 统一```namespace```: ```EqlConfig```.
+
+```java
+Eql eql = new Aql("connectionName");
+```
+即读取```namespace:EqlConfig property:{connectionName}```配置为Eql配置.
