@@ -21,7 +21,7 @@ public class EqlApolloConfig extends EqlPropertiesConfig
 
     public static final String EQL_CONFIG_NAMESPACE = "EqlConfig";
 
-    private String connectionName;
+    private final String connectionName;
     private ConfigChangeListener changeListener;
 
     public EqlApolloConfig(String connectionName) {
