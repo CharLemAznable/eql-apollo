@@ -2,11 +2,16 @@ package com.github.charlemaznable.eql.combine;
 
 import com.github.charlemaznable.core.lang.ClzPath;
 import com.github.charlemaznable.eql.apollo.EqlApolloConfig;
+import org.apache.commons.text.StringSubstitutor;
 import org.n3r.eql.Eql;
 import org.n3r.eql.config.EqlConfig;
 import org.n3r.eql.config.EqlDiamondConfig;
 
-import static com.github.charlemaznable.core.config.Arguments.argumentsAsSubstitutor;
+import java.util.Properties;
+
+import static com.github.charlemaznable.core.config.Arguments.argumentsAsProperties;
+import static com.github.charlemaznable.core.lang.ClzPath.classResourceAsProperties;
+import static com.github.charlemaznable.core.lang.Propertiess.ssMap;
 
 public class Cql extends Eql {
 
@@ -17,9 +22,17 @@ public class Cql extends Eql {
     private static final boolean hasApollo;
     private static final boolean hasDiamond;
 
+    private static final Properties classPathProperties;
+
     static {
         hasApollo = ClzPath.classExists(APOLLO_CLZ);
         hasDiamond = ClzPath.classExists(DIAMOND_CLZ);
+        classPathProperties = classResourceAsProperties("cql.env.props");
+    }
+
+    static String envSource() {
+        return new StringSubstitutor(ssMap(argumentsAsProperties(
+                classPathProperties))).replace(ENV_SOURCE);
     }
 
     public Cql() {
@@ -36,8 +49,7 @@ public class Cql extends Eql {
 
     public static EqlConfig createEqlConfig(String connectionName) {
         if (hasApollo && hasDiamond) {
-            if ("apollo".equalsIgnoreCase(
-                    argumentsAsSubstitutor().replace(ENV_SOURCE))) {
+            if ("apollo".equalsIgnoreCase(envSource())) {
                 return new EqlApolloConfig(connectionName);
             }
             return new EqlDiamondConfig(connectionName);
