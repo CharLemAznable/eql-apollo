@@ -10,18 +10,18 @@
         <version>2023.1.2-SNAPSHOT</version>
     </parent>
 
-    <artifactId>eql-apollo</artifactId>
+    <artifactId>eql-extension</artifactId>
     <version>2023.1.2-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>Eql Apollo Extension</name>
-    <url>https://github.com/CharLemAznable/eql-apollo</url>
-    <description>Eql Apollo Extension.</description>
+    <name>Eql Extension</name>
+    <url>https://github.com/CharLemAznable/eql-extension</url>
+    <description>Eql Extension.</description>
 
     <scm>
-        <connection>scm:git:https://github.com/CharLemAznable/eql-apollo.git</connection>
-        <developerConnection>scm:git:https://github.com/CharLemAznable/eql-apollo.git</developerConnection>
-        <url>https://github.com/CharLemAznable/eql-apollo</url>
+        <connection>scm:git:https://github.com/CharLemAznable/eql-extension.git</connection>
+        <developerConnection>scm:git:https://github.com/CharLemAznable/eql-extension.git</developerConnection>
+        <url>https://github.com/CharLemAznable/eql-extension</url>
     </scm>
 
     <repositories>
@@ -46,6 +46,7 @@
 
     <properties>
         <char-elves.version>2023.1.2-SNAPSHOT</char-elves.version>
+        <etcdconf-client.version>2023.1.2-SNAPSHOT</etcdconf-client.version>
     </properties>
 
     <dependencies>
@@ -62,6 +63,12 @@
             <groupId>com.github.charlemaznable</groupId>
             <artifactId>char-elves</artifactId>
             <version>${char-elves.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.charlemaznable</groupId>
+            <artifactId>etcdconf-client</artifactId>
+            <version>${etcdconf-client.version}</version>
+            <optional>true</optional>
         </dependency>
     </dependencies>
 

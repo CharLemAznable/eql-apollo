@@ -1,10 +1,10 @@
-### eql-apollo
+### eql-extension
 
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.charlemaznable/eql-apollo/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.github.charlemaznable/eql-apollo/)
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.charlemaznable/eql-extension/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.github.charlemaznable/eql-extension/)
 [![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
-![GitHub code size](https://img.shields.io/github/languages/code-size/CharLemAznable/eql-apollo)
+![GitHub code size](https://img.shields.io/github/languages/code-size/CharLemAznable/eql-extension)
 
-Eql Apollo Extension, using Apollo config Eql.
+Eql Extension, using Apollo/Etcd config Eql.
 
 ##### Maven Dependency
 
@@ -16,12 +16,14 @@ Eql Apollo Extension, using Apollo config Eql.
 </dependency>
 ```
 
+TODO: rename eql-apollo to eql-extension.
+
 ##### Maven Dependency SNAPSHOT
 
 ```xml
 <dependency>
   <groupId>com.github.charlemaznable</groupId>
-  <artifactId>eql-apollo</artifactId>
+  <artifactId>eql-extension</artifactId>
   <version>2023.1.2-SNAPSHOT</version>
 </dependency>
 ```
@@ -34,3 +36,12 @@ Eql Apollo Extension, using Apollo config Eql.
 Eql eql = new Aql("connectionName");
 ```
 即读取```namespace:EqlConfig property:{connectionName}```配置为Eql配置.
+
+#### 使用Etcd配置[Eql](https://github.com/bingoohuang/eql)
+
+使用Etcd统一管理Eql配置, 统一```namespace```: ```EqlConfig```.
+
+```java
+Eql eql = new Etql("connectionName");
+```
+即读取```namespace:EqlConfig key:{connectionName}```配置为Eql配置.
