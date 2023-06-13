@@ -11,12 +11,10 @@ Eql Extension, using Apollo/Etcd config Eql.
 ```xml
 <dependency>
   <groupId>com.github.charlemaznable</groupId>
-  <artifactId>eql-apollo</artifactId>
-  <version>2023.1.1</version>
+  <artifactId>eql-extension</artifactId>
+  <version>2023.2.0</version>
 </dependency>
 ```
-
-TODO: rename eql-apollo to eql-extension.
 
 ##### Maven Dependency SNAPSHOT
 
@@ -24,7 +22,7 @@ TODO: rename eql-apollo to eql-extension.
 <dependency>
   <groupId>com.github.charlemaznable</groupId>
   <artifactId>eql-extension</artifactId>
-  <version>2023.1.2-SNAPSHOT</version>
+  <version>2023.2.1-SNAPSHOT</version>
 </dependency>
 ```
 
