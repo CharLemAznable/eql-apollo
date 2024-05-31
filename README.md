@@ -22,7 +22,7 @@ Eql Extension, using Apollo/Etcd config Eql.
 <dependency>
   <groupId>com.github.charlemaznable</groupId>
   <artifactId>eql-extension</artifactId>
-  <version>2023.2.3-SNAPSHOT</version>
+  <version>2024.0.0-SNAPSHOT</version>
 </dependency>
 ```
 
